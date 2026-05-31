@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="508.0" style="-fx-background-color: #222327;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_ALLALPHABET">
+   <children>
+      <Label layoutX="115.0" layoutY="-4.0" text="Вывод всех алфавитов" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="panelAlphabet" editable="false" layoutX="4.0" layoutY="35.0" prefHeight="513.0" prefWidth="499.0" style="-fx-text-fill: #ffffff; -fx-control-inner-background: #303238;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextArea>
+   </children>
+</AnchorPane>

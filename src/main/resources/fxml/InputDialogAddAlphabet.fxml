@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="508.0" style="-fx-background-color: #222327;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_ADDALPHABET">
+   <children>
+      <Button fx:id="createAlphabetBut" layoutX="182.0" layoutY="488.0" mnemonicParsing="false" onAction="#createAlphabet" style="-fx-background-color: #303238;" text="Создать алфавит" textFill="#6d6e77">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label layoutX="115.0" layoutY="-4.0" text="Добавление алфавита" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameAlphabet" layoutX="7.0" layoutY="108.0" prefHeight="25.0" prefWidth="355.0" promptText="Пример: Русский" style="-fx-background-color: #303238; -fx-text-fill: #ffffff;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="7.0" layoutY="81.0" prefHeight="27.0" prefWidth="261.0" text="Введите название алфавита" textFill="#6d6e77">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="charsAlphabet" layoutX="7.0" layoutY="226.0" prefHeight="25.0" prefWidth="355.0" promptText="Пример: абвгдеёжзийклмнопрстуфхцшщъьэюя" style="-fx-background-color: #303238; -fx-text-fill: #ffffff;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="8.0" layoutY="198.0" text="Введите символы алфавита без пробелов между ними" textFill="#6d6e77">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <CheckBox fx:id="punctuation" layoutX="7.0" layoutY="332.0" mnemonicParsing="false" text="Добавить пунктуацию (1234567890.,!?:'-+_ ) в алфавит?" textFill="#6d6e77">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></CheckBox>
+   </children>
+</AnchorPane>

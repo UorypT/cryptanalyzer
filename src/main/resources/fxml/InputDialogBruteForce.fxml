@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="548.0" prefWidth="508.0" style="-fx-background-color: #222327;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_BRUTEFORCE">
+   <children>
+      <Label layoutX="189.0" layoutY="-4.0" text="Brute Force" textFill="WHITE" AnchorPane.bottomAnchor="516.6666666666666" AnchorPane.topAnchor="-4.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.33333333333333" layoutY="49.0" text="Выберите способ получения текста" textFill="#6d6e77">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="3.0" layoutY="104.0" prefHeight="350.0" prefWidth="375.0" styleClass="floating" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="2.6666666666666856" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="96.0">
+         <tabs>
+            <Tab style="-fx-font-size: 16;" text="Текст">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="543.0" style="-fx-background-color: #222327;">
+                     <children>
+                        <Label layoutX="13.0" layoutY="3.0" text="Введите текст котовый нужно зашифровать" textFill="#6d6e77" AnchorPane.bottomAnchor="390.00000000000006" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="bruteForceTextBut" layoutX="337.3333333333333" layoutY="180.0" mnemonicParsing="false" onAction="#bruteForceText" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #303238;" text="Взломать" textFill="#6d6e77" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="337.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="180.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                        <TextField fx:id="textBut" alignment="TOP_LEFT" layoutX="15.0" layoutY="31.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="107.0" prefWidth="320.0" style="-fx-background-color: #303238; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="280.6666666666667" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="29.999999999999986">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                        <ComboBox fx:id="alphabetBut" layoutX="5.0" layoutY="176.0" onAction="#allAlphabets" prefHeight="38.0" prefWidth="326.0" promptText="Выберите алфавит" style="-fx-font-size: 16;" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="180.0" />
+                        <TextField fx:id="resultBruteForceBut" alignment="TOP_LEFT" editable="false" layoutX="15.0" layoutY="286.0" prefHeight="107.0" prefWidth="320.0" style="-fx-background-color: #303238; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="297.33333333333337">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                        <Label layoutX="5.0" layoutY="275.0" text="Результат шифровки" textFill="#6d6e77" AnchorPane.bottomAnchor="121.99999999999999" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="268.6666666666667">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <CheckBox fx:id="pathInFileBut" layoutX="5.0" layoutY="146.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="335.0" text="Выбрать путь сохранения файла?" textFill="#6d6e77" AnchorPane.bottomAnchor="244.66666666666666" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="146.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></CheckBox>
+                        <Label layoutX="82.0" layoutY="218.0" prefHeight="27.0" prefWidth="333.0" text="Лучший ключ по результату взлома:" textFill="#6d6e77" AnchorPane.bottomAnchor="174.66666666666666" AnchorPane.rightAnchor="82.66666666666669" AnchorPane.topAnchor="218.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="bestKeyLabel" alignment="CENTER" layoutX="206.0" layoutY="245.0" prefHeight="35.0" prefWidth="87.0" text="-" textFill="#6d6e77" AnchorPane.bottomAnchor="141.66666666666663" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="205.33333333333337" AnchorPane.topAnchor="245.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-size: 16;" text="Файл">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #222327;">
+                     <children>
+                        <Label layoutX="10.0" text="Выберите путь файла для шифровки" textFill="#6d6e77" AnchorPane.bottomAnchor="390.00000000000006" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="3.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="bruteForceTextBut1" layoutX="341.0" layoutY="180.0" mnemonicParsing="false" onAction="#bruteForceText1" style="-fx-background-color: #303238;" text="Взломать" textFill="#6d6e77" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="337.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="180.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                        <ComboBox fx:id="alphabetBut1" layoutX="12.0" layoutY="192.0" onAction="#allAlphabets1" prefHeight="25.0" prefWidth="176.0" promptText="Выберите алфавит" style="-fx-font-size: 16;" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="180.0" />
+                        <TextField fx:id="resultBruteForceBut1" alignment="TOP_LEFT" editable="false" layoutX="3.0" layoutY="291.0" prefHeight="107.0" prefWidth="320.0" style="-fx-background-color: #303238; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="297.33333333333337">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                        <Label layoutX="7.0" layoutY="263.0" text="Результат шифровки" textFill="#6d6e77" AnchorPane.bottomAnchor="121.99999999999999" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="268.6666666666667">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Button fx:id="textInFileBut" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" onAction="#textInFile" prefHeight="25.0" prefWidth="321.0" style="-fx-background-color: #303238;" text="Выбрать путь" textFill="#6d6e77" AnchorPane.bottomAnchor="357.33333333333337" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="31.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <CheckBox fx:id="pathInFileBut1" layoutX="7.0" layoutY="164.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="336.0" text="Выбрать путь сохранения файла?" textFill="#6d6e77" AnchorPane.bottomAnchor="244.66666666666666" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="146.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></CheckBox>
+                        <TextField fx:id="filePathResultBut" alignment="TOP_LEFT" layoutX="5.0" layoutY="99.0" prefHeight="53.0" prefWidth="320.0" style="-fx-background-color: #303238; -fx-text-fill: #ffffff;" AnchorPane.bottomAnchor="280.6666666666667" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="100.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                        <Label layoutX="10.0" layoutY="56.0" text="Итоговый путь файла для шифровки" textFill="#6d6e77" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="72.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="156.0" layoutY="227.0" prefHeight="27.0" prefWidth="333.0" text="Лучший ключ по результату взлома:" textFill="#6d6e77" AnchorPane.bottomAnchor="174.66666666666666" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="82.66666666666669" AnchorPane.topAnchor="218.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="bestKeyLabel1" alignment="CENTER" layoutX="206.0" layoutY="245.0" text="-" textFill="#6d6e77" AnchorPane.bottomAnchor="141.66666666666669" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="245.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../data/stylesComboBox.css" />
+      <URL value="@../data/stylesTabPane.css" />
+   </stylesheets>
+</AnchorPane>
